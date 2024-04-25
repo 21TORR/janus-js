@@ -4,14 +4,15 @@
 		"fix-lint": "dprint fmt"
 	},
 	"devDependencies": {
-		"@typescript-eslint/eslint-plugin": "^6.18.1",
-		"dprint": "^0.45.0",
-		"eslint": "^8.56.0",
-		"eslint-plugin-jsdoc": "^48.0.2",
-		"eslint-plugin-react": "^7.33.2",
-		"eslint-plugin-react-hooks": "^4.6.0",
+		"@typescript-eslint/eslint-plugin": "^6.21",
+		"dprint": "^0.45.1",
+		"eslint": "^8.57",
+		"eslint-plugin-jsdoc": "^48.2",
+		"eslint-plugin-react": "^7.34",
+		"eslint-plugin-react-hooks": "^4.6",
 		"eslint-plugin-storybook": "^0.6.15",
-		"stylelint": "^16.4.0",
-		"stylelint-config-standard": "^36.0.0"
+		"stylelint": "^16.4",
+		"stylelint-config-standard": "^36.0",
+		"typescript": "^5.4"
 	}
 }
