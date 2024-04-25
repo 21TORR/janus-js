@@ -3,10 +3,24 @@ extends:
 
 customSyntax: postcss-scss
 
+plugins:
+    - stylelint-scss
+
 ignoreFiles:
     - "storybook-static/**"
 
 rules:
+    # @-rules
+    # Disable the rule from CSS and enable it from SCSS
+    at-rule-no-unknown: ~
+    scss/at-rule-no-unknown: true
+    at-rule-empty-line-before:
+        - always
+        - except: ["blockless-after-same-name-blockless", "blockless-after-blockless", "first-nested"]
+          ignore: ["after-comment"]
+          ignoreAtRules: ["else"]
+
+
     # Color
     color-named: never
 
@@ -53,6 +67,9 @@ rules:
                 - td
                 - th
                 - tr
+    selector-pseudo-class-no-unknown:
+        - error
+        - ignorePseudoClasses: ["global"]
 
     # Unit
     unit-disallowed-list: [ "pc", "in", "cm", "mm", "ex" ]
@@ -66,3 +83,11 @@ rules:
         - lower
         - camelCaseSvgKeywords: true
 
+    # Disabled Style Rules
+    # We use dprint for formatting
+    color-function-notation: ~
+    comment-empty-line-before: ~
+    custom-property-empty-line-before: ~
+    declaration-empty-line-before: ~
+    font-family-name-quotes: ~
+    declaration-block-no-redundant-longhand-properties: ~

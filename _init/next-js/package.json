@@ -2,10 +2,12 @@
 	"scripts": {
 		"fix-lint": "pnpm run /^fix-lint:.*/",
 		"fix-lint:format": "dprint fmt",
+		"fix-lint:stylelint": "stylelint 'assets/**/*.{scss,css}' 'src/**/*.{scss,css}' --color --fix",
 		"fix-lint:package.json": "prettier-package-json --use-tabs --write",
 		"lint": "pnpm run /^lint:.*/",
 		"lint:format": "dprint check",
 		"lint:next": "next lint",
+		"lint:stylelint": "stylelint 'assets/**/*.{scss,css}' 'src/**/*.{scss,css}' --color",
 		"lint:package.json": "prettier-package-json --use-tabs --list-different",
 		"test": "pnpm run /^test:.*/",
 		"test:typescript": "tsc --noEmit --diagnostics"
@@ -18,8 +20,10 @@
 		"eslint-plugin-react": "^7.34",
 		"eslint-plugin-react-hooks": "^4.6",
 		"eslint-plugin-storybook": "^0.6.15",
+		"postcss-scss": "^4.0",
 		"stylelint": "^16.4",
 		"stylelint-config-standard": "^36.0",
+		"stylelint-scss": "^6.2",
 		"typescript": "^5.4"
 	}
 }
