@@ -1,6 +1,14 @@
 {
 	"lineWidth": 120,
 	"useTabs": true,
+	"prettier": {
+		"associations": [
+			"**/*.{css,scss}"
+		],
+		"parser": "scss",
+		"printWidth": 120,
+		"useTabs": true
+	},
 	"typescript": {
 		"bracePosition": "nextLine",
 		"jsx.bracketPosition": "nextLine",
@@ -36,6 +44,7 @@
 	],
 	"plugins": [
 		"https://plugins.dprint.dev/json-0.19.1.wasm",
-		"https://plugins.dprint.dev/typescript-0.88.7.wasm"
+		"https://plugins.dprint.dev/typescript-0.88.7.wasm",
+		"https://plugins.dprint.dev/prettier-0.40.0.json@68c668863ec834d4be0f6f5ccaab415df75336a992aceb7eeeb14fdf096a9e9c"
 	]
 }

@@ -1,9 +1,17 @@
 {
 	"scripts": {
-		"lint": "next lint && $npm_execpath run lint:ts-cs",
-		"lint:ts-cs": "dprint check"
+		"lint": "dprint check",
+		"fix-lint": "dprint fmt"
 	},
 	"devDependencies": {
-		"dprint": "^0.45.0"
+		"@typescript-eslint/eslint-plugin": "^6.18.1",
+		"dprint": "^0.45.0",
+		"eslint": "^8.56.0",
+		"eslint-plugin-jsdoc": "^48.0.2",
+		"eslint-plugin-react": "^7.33.2",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-plugin-storybook": "^0.6.15",
+		"stylelint": "^16.1.0",
+		"stylelint-config-standard": "^36.0.0"
 	}
 }

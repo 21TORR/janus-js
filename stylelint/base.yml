@@ -1,0 +1,68 @@
+extends:
+    - stylelint-config-standard
+
+customSyntax: postcss-scss
+
+ignoreFiles:
+    - "storybook-static/**"
+
+rules:
+    # Color
+    color-named: never
+
+    # Declaration
+    declaration-no-important: true
+
+    # Font weight
+    font-weight-notation: numeric
+
+    # Max & Min
+    max-nesting-depth: 4
+
+    # Rule
+    rule-empty-line-before:
+        - always-multi-line
+        -
+            except:
+                - "after-single-line-comment"
+                - "first-nested"
+            ignore:
+                - "after-comment"
+
+    # Selector
+    selector-max-id: 0
+    selector-max-type:
+        - 0
+        -
+            ignoreTypes:
+                - a
+                - body
+                - button
+                - dd
+                - dt
+                - em
+                - html
+                - i
+                - iframe
+                - img
+                - li
+                - mark
+                - path
+                - strong
+                - svg
+                - td
+                - th
+                - tr
+
+    # Unit
+    unit-disallowed-list: [ "pc", "in", "cm", "mm", "ex" ]
+    unit-no-unknown: true
+
+    # Unknown
+    no-unknown-animations: true
+
+    # Value
+    value-keyword-case:
+        - lower
+        - camelCaseSvgKeywords: true
+

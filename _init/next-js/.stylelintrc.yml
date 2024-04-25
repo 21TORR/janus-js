@@ -1,0 +1,4 @@
+extends:
+    - './node_modules/@21torr/janus/stylelint/base.yml'
+
+# THIS IS A TEST

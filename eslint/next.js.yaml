@@ -1,0 +1,16 @@
+parser: '@typescript-eslint/parser'
+
+parserOptions:
+    project: './tsconfig.json'
+
+
+plugins:
+    - react
+    - jsdoc
+    - '@typescript-eslint'
+
+extends:
+    - './includes/base.yaml'
+    - './includes/jsdoc.yaml'
+    - './includes/react.yaml'
+    - './includes/typescript.yaml'
