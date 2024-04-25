@@ -1,7 +1,14 @@
 {
 	"scripts": {
-		"lint": "dprint check",
-		"fix-lint": "dprint fmt"
+		"fix-lint": "pnpm run /^fix-lint:.*/",
+		"fix-lint:format": "dprint fmt",
+		"fix-lint:package.json": "prettier-package-json --use-tabs --write",
+		"lint": "pnpm run /^lint:.*/",
+		"lint:format": "dprint check",
+		"lint:next": "next lint",
+		"lint:package.json": "prettier-package-json --use-tabs --list-different",
+		"test": "pnpm run /^test:.*/",
+		"test:typescript": "tsc --noEmit --diagnostics"
 	},
 	"devDependencies": {
 		"@typescript-eslint/eslint-plugin": "^6.21",
