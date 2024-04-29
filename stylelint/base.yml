@@ -1,0 +1,93 @@
+extends:
+    - stylelint-config-standard
+
+customSyntax: postcss-scss
+
+plugins:
+    - stylelint-scss
+
+ignoreFiles:
+    - "storybook-static/**"
+
+rules:
+    # @-rules
+    # Disable the rule from CSS and enable it from SCSS
+    at-rule-no-unknown: ~
+    scss/at-rule-no-unknown: true
+    at-rule-empty-line-before:
+        - always
+        - except: ["blockless-after-same-name-blockless", "blockless-after-blockless", "first-nested"]
+          ignore: ["after-comment"]
+          ignoreAtRules: ["else"]
+
+
+    # Color
+    color-named: never
+
+    # Declaration
+    declaration-no-important: true
+
+    # Font weight
+    font-weight-notation: numeric
+
+    # Max & Min
+    max-nesting-depth: 4
+
+    # Rule
+    rule-empty-line-before:
+        - always-multi-line
+        -
+            except:
+                - "after-single-line-comment"
+                - "first-nested"
+            ignore:
+                - "after-comment"
+
+    # Selector
+    selector-max-id: 0
+    selector-max-type:
+        - 0
+        -
+            ignoreTypes:
+                - a
+                - body
+                - button
+                - dd
+                - dt
+                - em
+                - html
+                - i
+                - iframe
+                - img
+                - li
+                - mark
+                - path
+                - strong
+                - svg
+                - td
+                - th
+                - tr
+    selector-pseudo-class-no-unknown:
+        - error
+        - ignorePseudoClasses: ["global"]
+
+    # Unit
+    unit-disallowed-list: [ "pc", "in", "cm", "mm", "ex" ]
+    unit-no-unknown: true
+
+    # Unknown
+    no-unknown-animations: true
+
+    # Value
+    value-keyword-case:
+        - lower
+        - camelCaseSvgKeywords: true
+
+    # Disabled Style Rules
+    # We use dprint for formatting
+    color-function-notation: ~
+    comment-empty-line-before: ~
+    custom-property-empty-line-before: ~
+    declaration-empty-line-before: ~
+    font-family-name-quotes: ~
+    declaration-block-no-redundant-longhand-properties: ~

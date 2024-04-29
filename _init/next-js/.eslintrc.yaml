@@ -1,0 +1,4 @@
+extends:
+    - "./node_modules/@21torr/janus/eslint/next.js.yaml"
+    - "next/core-web-vitals"
+    - "plugin:storybook/recommended"
