@@ -3,12 +3,12 @@ import js from "@eslint/js";
 import globals from "globals";
 import react from "eslint-plugin-react/configs/recommended.js";
 import jsXA11y from "eslint-plugin-jsx-a11y";
+import * as jsXA11y from "eslint-plugin-jsx-a11y";
 
 export default [
 	js.configs.recommended,
-	// We don't use the recommended flags, as they include quite a lot of
-	// code formatting rules
 	// jsdoc.configs["flat/recommended"],
+	//  └> We don't use the recommended flags, as they include quite a lot of code formatting rules
 	jsXA11y.flatConfigs.recommended,
 	react,
 	{
