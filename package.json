@@ -9,6 +9,7 @@
 		"deep-equal-json": "^1.0.0",
 		"deep-extend": "^0.6.0",
 		"eslint-plugin-jsdoc": "^48.7.0",
+		"eslint-plugin-jsx-a11y": "^6.9.0",
 		"eslint-plugin-react": "^7.34.3",
 		"eslint-plugin-react-hooks": "^4.6.2",
 		"fs-extra": "^11.2.0",

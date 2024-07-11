@@ -2,12 +2,14 @@ import js from "@eslint/js";
 // import jsdoc from "eslint-plugin-jsdoc";
 import globals from "globals";
 import react from "eslint-plugin-react/configs/recommended.js";
+import jsXA11y from "eslint-plugin-jsx-a11y";
 
 export default [
 	js.configs.recommended,
 	// We don't use the recommended flags, as they include quite a lot of
 	// code formatting rules
-	jsdoc.configs["flat/recommended"],
+	// jsdoc.configs["flat/recommended"],
+	jsXA11y.flatConfigs.recommended,
 	react,
 	{
 		name: "21TORR Base",
