@@ -4,6 +4,10 @@
 	"bin": {
 		"janus": "bin/cli.mjs"
 	},
+	"scripts": {
+		"test": "pnpm run /^test:.*/",
+		"test:eslint-nextjs": "eslint --config tests/next-js/eslint.config.mjs tests/next-js/test.ts"
+	},
 	"dependencies": {
 		"@eslint/js": "^9.6.0",
 		"deep-equal-json": "^1.0.0",

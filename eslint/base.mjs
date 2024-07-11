@@ -1,7 +1,8 @@
 import js from "@eslint/js";
-// import jsdoc from "eslint-plugin-jsdoc";
+import jsdoc from "eslint-plugin-jsdoc";
 import globals from "globals";
 import react from "eslint-plugin-react/configs/recommended.js";
+import reactHooksPlugin from "eslint-plugin-react-hooks";
 import * as jsXA11y from "eslint-plugin-jsx-a11y";
 import tseslint from 'typescript-eslint';
 
@@ -9,28 +10,37 @@ export default [
 	js.configs.recommended,
 	// jsdoc.configs["flat/recommended"],
 	//  └> We don't use the recommended flags, as they include quite a lot of code formatting rules
-	jsXA11y.flatConfigs.recommended,
+	//jsXA11y.default.flatConfigs.recommended,
 	...tseslint.configs.recommendedTypeChecked,
 	...tseslint.configs.strictTypeChecked,
 	react,
 	{
 		name: "21TORR Base",
-		parserOptions: {
-			ecmaVersion: "latest",
-			sourceType: "module",
-			ecmaFeatures: {
-				jsx: true,
+		languageOptions: {
+			parserOptions: {
+				ecmaVersion: "latest",
+				sourceType: "module",
+				ecmaFeatures: {
+					jsx: true,
+				},
+			},
+			globals: {
+				...globals.browser,
+				...globals.es2020,
+				...globals["shared-node-browser"],
 			},
 		},
 		settings: {
 			jsdoc: {
 				mode: "typescript",
 			},
+			react: {
+				"version": "detect",
+			},
 		},
-		globals: {
-			...globals.browser,
-			...globals.es2020,
-			...globals["shared-node-browser"],
+		plugins: {
+			jsdoc: jsdoc,
+			"react-hooks": reactHooksPlugin,
 		},
 		rules: {
 			// region ESLint: Possible Problems
@@ -129,7 +139,9 @@ export default [
 			"@typescript-eslint/explicit-function-return-type": "error",
 			"@typescript-eslint/explicit-member-accessibility": "error",
 			"@typescript-eslint/explicit-module-boundary-types": "error",
-			"@typescript-eslint/max-params": ["warn", 5],
+			"@typescript-eslint/max-params": ["warn", {
+				max: 5,
+			}],
 			"@typescript-eslint/no-array-delete": "error",
 			"@typescript-eslint/no-confusing-non-null-assertion": "error",
 			"@typescript-eslint/no-empty-object-type": "error",
@@ -145,6 +157,12 @@ export default [
 			"@typescript-eslint/prefer-string-starts-ends-with": "warn",
 			"@typescript-eslint/require-array-sort-compare": "error",
 			"@typescript-eslint/return-await": "error",
+			// endregion
+
+			// region Plugin: TypeScript disabled (they require parserServices)
+			"@typescript-eslint/await-thenable": "off",
+			"@typescript-eslint/no-base-to-string": "off",
+			"@typescript-eslint/no-duplicate-type-constituents": "off",
 			// endregion
 		}
 	}
