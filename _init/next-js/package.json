@@ -24,6 +24,7 @@
 		"stylelint": "^16.4",
 		"stylelint-config-standard": "^36.0",
 		"stylelint-scss": "^6.2",
-		"typescript": "^5.4"
+		"typescript": "^5.4",
+		"typescript-eslint": "^7.16"
 	}
 }
