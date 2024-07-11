@@ -1,5 +1,5 @@
 import js from "@eslint/js";
-import jsdoc from 'eslint-plugin-jsdoc';
+import jsdoc from "eslint-plugin-jsdoc";
 import globals from "globals";
 import react from "eslint-plugin-react/configs/recommended.js";
 
