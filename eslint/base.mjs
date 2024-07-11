@@ -2,14 +2,16 @@ import js from "@eslint/js";
 // import jsdoc from "eslint-plugin-jsdoc";
 import globals from "globals";
 import react from "eslint-plugin-react/configs/recommended.js";
-import jsXA11y from "eslint-plugin-jsx-a11y";
 import * as jsXA11y from "eslint-plugin-jsx-a11y";
+import tseslint from 'typescript-eslint';
 
 export default [
 	js.configs.recommended,
 	// jsdoc.configs["flat/recommended"],
 	//  └> We don't use the recommended flags, as they include quite a lot of code formatting rules
 	jsXA11y.flatConfigs.recommended,
+	...tseslint.configs.recommendedTypeChecked,
+	...tseslint.configs.strictTypeChecked,
 	react,
 	{
 		name: "21TORR Base",
@@ -37,21 +39,23 @@ export default [
 			"no-duplicate-imports": "warn",
 			"no-self-compare": "error",
 			"no-template-curly-in-string": "warn",
-			"no-use-before-define": "warn",
+			// "no-use-before-define": "error",
+			//  └> see below: @typescript-eslint/no-use-before-define
 			"no-useless-assignment": "warn",
 			// endregion
 
 			// region ESLint: Suggestions
 			"block-scoped-var": "error",
 			"default-case-last": "warn",
-			"default-param-last": "warn",
+			// "default-param-last": "warn",
+			//  └> see below: @typescript-eslint/default-param-last
 			"eqeqeq": ["error", "always", {
 				"null": "ignore",
 			}],
 			"max-depth": ["warn", 4],
-			"max-params": ["warn", 5],
+			// "max-params": ["warn", 5],
+			//  └> see below: @typescript-eslint/max-params
 			"no-alert": "error",
-			"no-array-constructor": "error",
 			"no-bitwise": "warn",
 			"no-caller": "warn",
 			"no-console": "warn",
@@ -111,6 +115,32 @@ export default [
 			// region Plugin: React Hooks
 			"react-hooks/rules-of-hooks": "error",
 			"react-hooks/exhaustive-deps": "warn"
+			// endregion
+
+			// region Plugin: TypeScript
+			"@typescript-eslint/adjacent-overload-signatures": "error",
+			"@typescript-eslint/ban-ts-comment": ["error", {
+				"ts-ignore": "allow-with-description",
+			}],
+			"@typescript-eslint/consistent-type-assertions": ["error", {
+				assertionStyle: 'as',
+			}],
+			"@typescript-eslint/default-param-last": "error",
+			"@typescript-eslint/explicit-function-return-type": "error",
+			"@typescript-eslint/explicit-member-accessibility": "error",
+			"@typescript-eslint/explicit-module-boundary-types": "error",
+			"@typescript-eslint/max-params": ["warn", 5],
+			"@typescript-eslint/no-array-delete": "error",
+			"@typescript-eslint/no-confusing-non-null-assertion": "error",
+			"@typescript-eslint/no-empty-object-type": "error",
+			"@typescript-eslint/no-loop-func": "error",
+			"@typescript-eslint/no-use-before-define": "error",
+			"@typescript-eslint/no-useless-empty-export": "error",
+			"@typescript-eslint/prefer-find": "warn",
+			"@typescript-eslint/prefer-reduce-type-parameter": "warn",
+			"@typescript-eslint/prefer-string-starts-ends-with": "warn",
+			"@typescript-eslint/require-array-sort-compare": "error",
+			"@typescript-eslint/return-await": "error",
 			// endregion
 		}
 	}
