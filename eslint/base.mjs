@@ -1,12 +1,14 @@
 import js from "@eslint/js";
 import jsdoc from 'eslint-plugin-jsdoc';
 import globals from "globals";
+import react from "eslint-plugin-react/configs/recommended.js";
 
 export default [
 	js.configs.recommended,
 	// We don't use the recommended flags, as they include quite a lot of
 	// code formatting rules
 	jsdoc.configs["flat/recommended"],
+	react,
 	{
 		name: "21TORR Base",
 		parserOptions: {
@@ -81,6 +83,30 @@ export default [
 			"jsdoc/require-returns-description": "error",
 			"jsdoc/require-yields-check": "error",
 			"jsdoc/valid-types": "error",
+			// endregion
+
+			// region Plugin: React
+			"react/button-has-type": "error",
+			"react/jsx-curly-brace-presence": "warn",
+			"react/jsx-filename-extension": ["error", {
+				extensions: [".jsx", ".tsx"],
+			}],
+			"react/jsx-no-constructed-context-values": "error",
+			"react/jsx-no-leaked-render": "warn",
+			"react/jsx-no-script-url": "error",
+			"react/jsx-pascal-case": ["error"],
+			"react/no-access-state-in-setstate": ["error"],
+			"react/no-did-mount-set-state": ["error"],
+			"react/no-did-update-set-state": ["error"],
+			"react/no-this-in-sfc": "error",
+			"react/no-will-update-set-state": "error",
+			"react/prefer-es6-class": ["error", "always"],
+			"react/prefer-read-only-props": "error",
+			"react/style-prop-object": "warn",
+			"react/void-dom-elements-no-children": "error",
+			// endregion
+
+			// region Plugin: React Hooks
 			// endregion
 		}
 	}
