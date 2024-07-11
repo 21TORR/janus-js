@@ -114,7 +114,7 @@ export default [
 
 			// region Plugin: React Hooks
 			"react-hooks/rules-of-hooks": "error",
-			"react-hooks/exhaustive-deps": "warn"
+			"react-hooks/exhaustive-deps": "warn",
 			// endregion
 
 			// region Plugin: TypeScript
@@ -133,7 +133,11 @@ export default [
 			"@typescript-eslint/no-array-delete": "error",
 			"@typescript-eslint/no-confusing-non-null-assertion": "error",
 			"@typescript-eslint/no-empty-object-type": "error",
+			"@typescript-eslint/no-explicit-any": "off",
 			"@typescript-eslint/no-loop-func": "error",
+			"@typescript-eslint/no-unused-vars": ["warn", {
+				argsIgnorePattern: 'props',
+			}],
 			"@typescript-eslint/no-use-before-define": "error",
 			"@typescript-eslint/no-useless-empty-export": "error",
 			"@typescript-eslint/prefer-find": "warn",
