@@ -1,7 +1,11 @@
 import js from "@eslint/js";
+import jsdoc from 'eslint-plugin-jsdoc';
 
 export default [
 	js.configs.recommended,
+	// We don't use the recommended flags, as they include quite a lot of
+	// code formatting rules
+	jsdoc.configs["flat/recommended"],
 	{
 		name: "21TORR Base",
 		parserOptions: {
@@ -9,6 +13,11 @@ export default [
 			sourceType: "module",
 			ecmaFeatures: {
 				jsx: true,
+			},
+		},
+		settings: {
+			jsdoc: {
+				mode: "typescript",
 			},
 		},
 		rules: {
@@ -44,10 +53,28 @@ export default [
 			"unicode-bom": ["error", "never"],
 			// endregion
 
-			// region JSDoc
+			// region Plugin: JSDoc
+			"jsdoc/check-access": "error",
 			"jsdoc/check-param-names": ["error", {
 				disableMissingParamChecks: true,
-			}]
+			}],
+			"jsdoc/check-property-names": "error",
+			"jsdoc/check-tag-names": "error",
+			"jsdoc/check-types": "error",
+			"jsdoc/check-values": "error",
+			"jsdoc/empty-tags": "error",
+			"jsdoc/implements-on-classes": "error",
+			"jsdoc/no-defaults": "error",
+			"jsdoc/no-types": "error",
+			"jsdoc/require-param-description": "warn",
+			"jsdoc/require-param-name": "error",
+			"jsdoc/require-param-type": "error",
+			"jsdoc/require-property-description": "warn",
+			"jsdoc/require-property-name": "error",
+			"jsdoc/require-returns-check": "error",
+			"jsdoc/require-returns-description": "error",
+			"jsdoc/require-yields-check": "error",
+			"jsdoc/valid-types": "error",
 			// endregion
 		}
 	}
