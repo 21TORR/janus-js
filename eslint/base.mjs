@@ -107,6 +107,8 @@ export default [
 			// endregion
 
 			// region Plugin: React Hooks
+			"react-hooks/rules-of-hooks": "error",
+			"react-hooks/exhaustive-deps": "warn"
 			// endregion
 		}
 	}
