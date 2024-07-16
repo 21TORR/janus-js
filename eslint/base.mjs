@@ -11,8 +11,9 @@ export default [
 	// jsdoc.configs["flat/recommended"],
 	//  └> We don't use the recommended flags, as they include quite a lot of code formatting rules
 	//jsXA11y.default.flatConfigs.recommended,
-	...tseslint.configs.recommendedTypeChecked,
-	...tseslint.configs.strictTypeChecked,
+	...tseslint.configs.recommended,
+	...tseslint.configs.strict,
+	//  └> the *TypeChecked rule sets have too many false positives
 	react,
 	{
 		name: "21TORR Base",
