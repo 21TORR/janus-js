@@ -9,6 +9,7 @@
 		"test:eslint-nextjs": "eslint --config tests/next-js/eslint.config.mjs tests/next-js/test.ts"
 	},
 	"dependencies": {
+		"@eslint/eslintrc": "^3.1.0",
 		"@eslint/js": "^9.6.0",
 		"@next/eslint-plugin-next": "^14.2.5",
 		"deep-equal-json": "^1.0.0",
