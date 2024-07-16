@@ -6,7 +6,8 @@
 	},
 	"scripts": {
 		"test": "pnpm run /^test:.*/",
-		"test:eslint-nextjs": "eslint --config tests/next-js/eslint.config.mjs tests/next-js/test.ts"
+		"test:eslint-nextjs": "eslint --config tests/next-js/eslint.config.mjs tests/next-js/test.ts",
+		"test:stylelint": "stylelint --config tests/stylelint/.stylelintrc.yml 'tests/stylelint/*.{scss,css}' --color"
 	},
 	"dependencies": {
 		"@eslint/eslintrc": "^3.1.0",
@@ -31,6 +32,7 @@
 		"typescript-eslint": "^7.16.0"
 	},
 	"devDependencies": {
-		"eslint": "^9.6.0"
+		"eslint": "^9.6.0",
+		"stylelint": "^16.7.0"
 	}
 }
