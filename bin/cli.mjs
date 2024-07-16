@@ -53,6 +53,11 @@ program
 		{
 			const log = [" •"];
 
+			if (false === entry.removed)
+			{
+				return;
+			}
+
 			if ("package.json" === entry.file)
 			{
 				log.push(kleur.yellow(entry.file));
@@ -62,7 +67,12 @@ program
 				log.push(kleur.magenta(entry.file));
 			}
 
-			if (entry.changed)
+			if (true === entry.removed)
+			{
+				log.push(`(${kleur.red("removed")})`);
+				hasAnyChange = true;
+			}
+			else if (entry.changed)
 			{
 				log.push(`(${kleur.red("updated")})`);
 				hasAnyChange = true;
