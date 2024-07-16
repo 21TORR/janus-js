@@ -52,7 +52,8 @@ export default [
 			"no-template-curly-in-string": "warn",
 			// "no-use-before-define": "error",
 			//  └> see below: @typescript-eslint/no-use-before-define
-			"no-useless-assignment": "warn",
+			// "no-useless-assignment": "warn",
+			// └> enable with ESLint v9
 			// endregion
 
 			// region ESLint: Suggestions
@@ -109,7 +110,8 @@ export default [
 				extensions: [".jsx", ".tsx"],
 			}],
 			"react/jsx-no-constructed-context-values": "error",
-			"react/jsx-no-leaked-render": "warn",
+			// "react/jsx-no-leaked-render": "off",
+			//  └> false positives for inline conditionals
 			"react/jsx-no-script-url": "error",
 			"react/jsx-pascal-case": ["error"],
 			"react/no-access-state-in-setstate": ["error"],
@@ -119,6 +121,8 @@ export default [
 			"react/no-will-update-set-state": "error",
 			"react/prefer-es6-class": ["error", "always"],
 			"react/prefer-read-only-props": "error",
+			"react/prop-types": "off",
+			"react/react-in-jsx-scope": "off",
 			"react/style-prop-object": "warn",
 			"react/void-dom-elements-no-children": "error",
 			// endregion
@@ -137,27 +141,30 @@ export default [
 				assertionStyle: 'as',
 			}],
 			"@typescript-eslint/default-param-last": "error",
-			"@typescript-eslint/explicit-function-return-type": "error",
+			"@typescript-eslint/explicit-function-return-type": "off",
+			//  └> covered by: @typescript-eslint/explicit-module-boundary-types
 			"@typescript-eslint/explicit-member-accessibility": "error",
 			"@typescript-eslint/explicit-module-boundary-types": "error",
 			"@typescript-eslint/max-params": ["warn", {
-				max: 5,
+				max: 6,
 			}],
 			"@typescript-eslint/no-array-delete": "error",
 			"@typescript-eslint/no-confusing-non-null-assertion": "error",
 			"@typescript-eslint/no-empty-object-type": "error",
 			"@typescript-eslint/no-explicit-any": "off",
 			"@typescript-eslint/no-loop-func": "error",
+			"@typescript-eslint/no-non-null-assertion": "off",
 			"@typescript-eslint/no-unused-vars": ["warn", {
 				argsIgnorePattern: 'props',
 			}],
-			"@typescript-eslint/no-use-before-define": "error",
+			"@typescript-eslint/no-use-before-define": "off",
+			//  └> false positives with named exports, even with `allowNamedExports: true`
 			"@typescript-eslint/no-useless-empty-export": "error",
 			"@typescript-eslint/prefer-find": "warn",
 			"@typescript-eslint/prefer-reduce-type-parameter": "warn",
 			"@typescript-eslint/prefer-string-starts-ends-with": "warn",
 			"@typescript-eslint/require-array-sort-compare": "error",
-			"@typescript-eslint/return-await": "error",
+			"@typescript-eslint/return-await": "off",
 			// endregion
 
 			// region Plugin: TypeScript disabled (they require parserServices)
