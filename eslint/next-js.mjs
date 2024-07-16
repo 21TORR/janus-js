@@ -5,7 +5,6 @@ import { FlatCompat } from '@eslint/eslintrc'
 const compat = new FlatCompat();
 
 export default [
-	...base,
 	...compat.config({
 		extends: [
 			'plugin:storybook/recommended',
@@ -14,6 +13,7 @@ export default [
 		ignorePatterns: ['!.storybook', 'storybook-static'],
 	}),
 	{
+		name: "Next.js",
 		plugins: {
 			'@next/next': nextPlugin,
 		},
@@ -22,4 +22,5 @@ export default [
 			...nextPlugin.configs['core-web-vitals'].rules,
 		},
 	},
+	...base,
 ];
