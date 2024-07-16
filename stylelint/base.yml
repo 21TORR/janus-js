@@ -10,6 +10,9 @@ ignoreFiles:
     - "storybook-static/**"
 
 rules:
+    # Descending
+    no-descending-specificity: false
+
     # @-rules
     # Disable the rule from CSS and enable it from SCSS
     at-rule-no-unknown: ~
