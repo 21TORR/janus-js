@@ -1,13 +1,12 @@
-import eslint21TORR from "@21torr/janus/eslit/base";
+import eslint21TORR from "@21torr/janus/eslint/next-js.mjs";
 import * as storybookPlugin from "eslint-plugin-storybook";
-import * as nextChecks from "next/core-web-vitals";
+
 import {fileURLToPath} from "node:url";
 import {join, dirname} from "node:path";
 
 export default [
-	nextChecks,
 	storybookPlugin,
-	eslint21TORR,
+	...eslint21TORR,
 	{
 		languageOptions: {
 			parserOptions: {
