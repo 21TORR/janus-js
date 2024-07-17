@@ -1,5 +1,6 @@
 .github
 .gitignore
 .idea
-tests
+/_init/*/node_modules
 pnpm-lock.yaml
+tests
