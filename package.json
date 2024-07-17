@@ -1,6 +1,5 @@
 {
 	"name": "@21torr/janus",
-	"version": "0.0.1",
 	"bin": {
 		"janus": "bin/cli.mjs"
 	},
