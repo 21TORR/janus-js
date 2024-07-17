@@ -1,9 +1,14 @@
-import eslint21TORR from "@21torr/janus/eslit/base";
-import * as storybookPlugin from "eslint-plugin-storybook";
-import * as nextChecks from "next/core-web-vitals";
+import eslint21TORR from "@21torr/janus/eslint/next-js.mjs";
 
 export default [
-	nextChecks,
-	storybookPlugin,
-	eslint21TORR,
+	...eslint21TORR,
+	{
+		name: "App Settings",
+		languageOptions: {
+			parserOptions: {
+				project: true,
+				tsconfigRootDir: import.meta.dirname,
+			},
+		},
+	}
 ];
