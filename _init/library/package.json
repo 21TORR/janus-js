@@ -1,0 +1,20 @@
+{
+	"scripts": {
+		"fix-lint": "pnpm run /^fix-lint:.*/",
+		"fix-lint:format": "dprint fmt",
+		"fix-lint:stylelint": "stylelint 'assets/**/*.{scss,css}' 'src/**/*.{scss,css}' --color --fix",
+		"fix-lint:package.json": "prettier-package-json --use-tabs --write",
+		"lint": "pnpm run /^lint:.*/",
+		"lint:format": "dprint check",
+		"lint:stylelint": "stylelint 'assets/**/*.{scss,css}' 'src/**/*.{scss,css}' --color",
+		"lint:package.json": "prettier-package-json --use-tabs --list-different",
+		"test": "pnpm run /^test:.*/",
+		"test:typescript": "tsc --noEmit --diagnostics"
+	},
+	"devDependencies": {
+		"dprint": "^0.47.2",
+		"eslint": "^8.57.0",
+		"stylelint": "^16.7.0",
+		"typescript": "^5.5.3"
+	}
+}
