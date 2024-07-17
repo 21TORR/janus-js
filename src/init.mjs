@@ -20,7 +20,7 @@ export function getSupportedAppTypes ()
 
 /**
  * @param {string} appType
- * @return {Promise<Array<{file: string, changed: boolean}>>}
+ * @return {Promise<Array<{file: string, changed?: boolean, removed?: boolean}>>}
  */
 export async function initializeAppType (appType)
 {
@@ -38,7 +38,33 @@ export async function initializeAppType (appType)
 		nodir: true,
 	});
 
-	return Promise.all(filesToCopy.map(async fileName =>
+	const filesToRemove = [
+		".eslintrc.yaml",
+	];
+
+	let changes = [];
+
+	changes = changes.concat(await Promise.all(filesToRemove.map(async fileName =>
+	{
+		const targetFilePath = join(targetDir, fileName);
+
+		if (existsSync(targetFilePath))
+		{
+			await promises.unlink(targetFilePath);
+
+			return {
+				file: fileName,
+				removed: true,
+			};
+		}
+
+		return {
+			file: fileName,
+			removed: false,
+		};
+	})));
+
+	changes = changes.concat(await Promise.all(filesToCopy.map(async fileName =>
 	{
 		const sourceFilePath = join(sourceDir, fileName);
 		const targetFilePath = join(targetDir, fileName);
@@ -78,7 +104,9 @@ export async function initializeAppType (appType)
 			file: fileName,
 			changed: true,
 		};
-	}));
+	})));
+
+	return changes;
 }
 
 

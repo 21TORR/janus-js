@@ -94,7 +94,8 @@ export default [
 			"jsdoc/no-types": "error",
 			"jsdoc/require-param-description": "warn",
 			"jsdoc/require-param-name": "error",
-			"jsdoc/require-param-type": "error",
+			"jsdoc/require-param-type": "off",
+			//  └> we use TypeScript for types
 			"jsdoc/require-property-description": "warn",
 			"jsdoc/require-property-name": "error",
 			"jsdoc/require-returns-check": "error",
