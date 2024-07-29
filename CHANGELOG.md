@@ -1,3 +1,9 @@
+1.0.3
+=====
+
+* (bug) Fix release workflow once more.
+
+
 1.0.2
 =====
 
