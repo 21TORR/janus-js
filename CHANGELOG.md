@@ -2,6 +2,7 @@
 =====
 
 * (improvement) Disable eslint rule `@typescript-eslint/no-namespace` only for files in `src/@types`.
+* (improvement) Add to `lint:eslint` and `fix-lint:eslint` in both init `package.json` the `--no-error-on-unmatched-pattern` flag.
 
 
 1.0.5
