@@ -1,3 +1,9 @@
+1.0.6
+=====
+
+* (improvement) Disable eslint rule `@typescript-eslint/no-namespace` only for files in `src/@types`.
+
+
 1.0.5
 =====
 

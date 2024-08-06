@@ -174,5 +174,14 @@ export default [
 			"@typescript-eslint/no-duplicate-type-constituents": "off",
 			// endregion
 		}
-	}
+	},
+	{
+		name: "Allow namespace in @types",
+		rules: {
+			"@typescript-eslint/no-namespace": "off",
+		},
+		files: [
+			"src/@types/*",
+		],
+	},
 ];
