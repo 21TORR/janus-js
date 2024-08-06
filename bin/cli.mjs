@@ -87,6 +87,18 @@ program
 
 		console.log("");
 
+		if ("next-js" === appType)
+		{
+			console.log("");
+			console.log("You need to set `ignoreDuringBuilds` in your next config to circumvent the internal ESLint call in Next.js (we our own call):");
+			console.log("");
+			console.log(kleur.yellow("  eslint: {"));
+			console.log(kleur.yellow("      // we use ESLint directly"));
+			console.log(kleur.yellow("      ignoreDuringBuilds: true,"));
+			console.log(kleur.yellow("  }"));
+			console.log("");
+		}
+
 		if (hasAnyChange)
 		{
 			console.log(kleur.bgYellow("                                                         "));
