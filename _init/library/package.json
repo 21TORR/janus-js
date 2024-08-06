@@ -1,12 +1,13 @@
 {
 	"scripts": {
 		"fix-lint": "pnpm run /^fix-lint:.*/",
+		"fix-lint:eslint": "eslint --fix --no-error-on-unmatched-pattern src || true",
 		"fix-lint:format": "dprint fmt",
 		"fix-lint:stylelint": "stylelint 'assets/**/*.{scss,css}' 'src/**/*.{scss,css}' --color --fix",
 		"fix-lint:package.json": "prettier-package-json --use-tabs --write",
 		"lint": "pnpm run /^lint:.*/",
+		"lint:eslint": "eslint --no-error-on-unmatched-pattern src",
 		"lint:format": "dprint check",
-		"lint:eslint": "eslint src",
 		"lint:stylelint": "stylelint 'assets/**/*.{scss,css}' 'src/**/*.{scss,css}' --color",
 		"lint:package.json": "prettier-package-json --use-tabs --list-different",
 		"test": "pnpm run /^test:.*/",
