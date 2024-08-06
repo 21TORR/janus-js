@@ -1,12 +1,13 @@
 {
 	"scripts": {
 		"fix-lint": "pnpm run /^fix-lint:.*/",
+		"fix-lint:eslint": "eslint --fix src stories || true",
 		"fix-lint:format": "dprint fmt",
 		"fix-lint:stylelint": "stylelint 'assets/**/*.{scss,css}' 'src/**/*.{scss,css}' --color --fix",
 		"fix-lint:package.json": "prettier-package-json --use-tabs --write",
 		"lint": "pnpm run /^lint:.*/",
+		"lint:eslint": "eslint src stories",
 		"lint:format": "dprint check",
-		"lint:next": "next lint",
 		"lint:stylelint": "stylelint 'assets/**/*.{scss,css}' 'src/**/*.{scss,css}' --color",
 		"lint:package.json": "prettier-package-json --use-tabs --list-different",
 		"test": "pnpm run /^test:.*/",
