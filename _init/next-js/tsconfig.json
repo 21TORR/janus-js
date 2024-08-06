@@ -1,52 +1,28 @@
 {
+	"extends": "@21torr/janus/tsconfig/next-js.json",
 	"compilerOptions": {
-		"allowJs": true,
 		"baseUrl": ".",
-		"esModuleInterop": true,
-		"forceConsistentCasingInFileNames": true,
-		"incremental": true,
-		"isolatedModules": true,
-		"jsx": "preserve",
-		"lib": [
-			"dom",
-			"dom.iterable",
-			"esnext"
-		],
-		"module": "ESNext",
-		"moduleResolution": "bundler",
-		"noEmit": true,
-		"noImplicitOverride": true,
-		"noUncheckedIndexedAccess": true,
 		"paths": {
 			"@/*": [
-				"${configDir}/src/*"
+				"./src/*"
 			],
 			"@assets/*": [
-				"${configDir}/assets/*"
+				"./assets/*"
 			],
 			"@public/*": [
-				"${configDir}/public/*"
+				"./public/*"
 			]
-		},
-		"plugins": [
-			{
-				"name": "next"
-			}
-		],
-		"resolveJsonModule": true,
-		"skipLibCheck": true,
-		"strict": true,
-		"target": "ESNext",
+		}
 	},
 	"include": [
-		"${configDir}/next-env.d.ts",
-		"${configDir}/**/*.ts",
-		"${configDir}/**/*.tsx",
-		"${configDir}/.storybook/**/*.ts",
-		"${configDir}/.storybook/**/*.tsx",
-		"${configDir}/.next/types/**/*.ts"
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		".storybook/**/*.ts",
+		".storybook/**/*.tsx",
+		".next/types/**/*.ts"
 	],
 	"exclude": [
-		"${configDir}/node_modules"
+		"node_modules"
 	]
 }

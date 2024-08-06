@@ -1,3 +1,9 @@
+1.0.7
+=====
+
+* (improvement) Update the _init `tsconfig.json` files, which extends now new basic `tsconfig.json` files.
+
+
 1.0.6
 =====
 
