@@ -1,37 +1,13 @@
 {
+	"extends": "@21torr/janus/tsconfig/library.json",
 	"compilerOptions": {
-		"allowJs": true,
-		"baseUrl": ".",
-		"declaration": true,
-		"esModuleInterop": true,
-		"forceConsistentCasingInFileNames": true,
-		"incremental": true,
-		"isolatedModules": true,
-		"jsx": "react",
-		"lib": [
-			"dom",
-			"dom.iterable",
-			"esnext"
-		],
-		"module": "ESNext",
-		"moduleDetection": "force",
-		"moduleResolution": "Bundler",
-		"noEmit": true,
-		"noImplicitThis": true,
-		"noImplicitOverride": true,
-		"noUncheckedIndexedAccess": true,
-		"removeComments": false,
-		"resolveJsonModule": true,
-		"skipLibCheck": true,
-		"sourceMap": false,
-		"strict": true,
-		"target": "ESNext"
+		"baseUrl": "."
 	},
 	"include": [
-		"${configDir}/**/*.ts",
-		"${configDir}/**/*.tsx"
+		"**/*.ts",
+		"**/*.tsx"
 	],
 	"exclude": [
-		"${configDir}/node_modules"
+		"node_modules"
 	]
 }
