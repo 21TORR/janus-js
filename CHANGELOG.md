@@ -1,3 +1,9 @@
+1.0.8
+=====
+
+* (bug) Disable TypeScript option `"noUncheckedIndexedAccess"` again due to compability issues with SCSS Modules.
+
+
 1.0.7
 =====
 
