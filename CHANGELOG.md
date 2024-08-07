@@ -1,3 +1,9 @@
+1.0.9
+=====
+
+* (improvement) Provide a `.nvmrc` and the correct Node.js version in the `engines` field of the `package.json` file. This is currently set to Node v20.
+
+
 1.0.8
 =====
 
