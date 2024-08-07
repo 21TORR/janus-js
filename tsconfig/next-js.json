@@ -15,7 +15,7 @@
 		"moduleResolution": "bundler",
 		"noEmit": true,
 		"noImplicitOverride": true,
-		"noUncheckedIndexedAccess": true,
+		"noUncheckedIndexedAccess": false,
 		"plugins": [
 			{
 				"name": "next"
