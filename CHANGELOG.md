@@ -1,7 +1,7 @@
 1.0.7
 =====
 
-* (improvement) Update the _init `tsconfig.json` files, which extends now new basic `tsconfig.json` files.
+* (improvement) Update the _init `tsconfig.json` files, which now extend new basic `tsconfig.json` files.
 
 
 1.0.6
