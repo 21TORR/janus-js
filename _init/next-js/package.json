@@ -14,6 +14,7 @@
 		"test:typescript": "tsc --noEmit --diagnostics"
 	},
 	"devDependencies": {
+		"@total-typescript/ts-reset": "^0.6.0",
 		"dprint": "^0.47.2",
 		"eslint": "^8.57.0",
 		"stylelint": "^16.9.0",

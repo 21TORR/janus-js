@@ -1,7 +1,9 @@
 1.0.10
 ======
 
-* (improvement) Upgrade all library versions.
+* (improvement) Upgrade all dependencies.
+* (improvement) Add `@total-typescript/ts-reset` as baseline for all libraries and projects.
+* (improvement) Allow Janus to copy-pasted nested files, and not just top-level ones.
 
 
 1.0.9

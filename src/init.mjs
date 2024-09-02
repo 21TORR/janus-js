@@ -32,10 +32,13 @@ export async function initializeAppType (appType)
 	const sourceDir = getLibPath(`_init/${appType}`);
 	const targetDir = process.cwd();
 
-	const filesToCopy = globSync("*", {
+	const filesToCopy = globSync("**", {
 		cwd: sourceDir,
 		dot: true,
 		nodir: true,
+		ignore: [
+			"node_modules/**",
+		],
 	});
 
 	const filesToRemove = [
