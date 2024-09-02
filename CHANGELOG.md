@@ -2,7 +2,7 @@
 ======
 
 * (improvement) Upgrade all dependencies.
-* (improvement) Add `@total-typescript/ts-reset` as baseline for all libraries and projects.
+* (improvement) Add `@total-typescript/ts-reset` as baseline library for all `next-js` projects.
 * (improvement) Allow Janus to copy-pasted nested files, and not just top-level ones.
 
 
