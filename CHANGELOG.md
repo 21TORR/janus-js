@@ -1,3 +1,9 @@
+1.0.10
+======
+
+* (improvement) Upgrade all library versions.
+
+
 1.0.9
 =====
 
