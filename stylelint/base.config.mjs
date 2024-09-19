@@ -33,6 +33,9 @@ export default {
 		// Declaration
 		"declaration-no-important": true,
 
+		// Descending
+		"no-descending-specificity": null,
+
 		// Font weight
 		"font-weight-notation": "numeric",
 
