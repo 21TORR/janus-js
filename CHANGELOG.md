@@ -1,3 +1,9 @@
+1.0.10
+=====
+
+* (improvement) Deactivate stylelint rule `no-descending-specificity`.
+
+
 1.0.9
 =====
 
