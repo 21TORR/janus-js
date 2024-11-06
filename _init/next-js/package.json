@@ -14,10 +14,10 @@
 		"test:typescript": "tsc --noEmit --diagnostics"
 	},
 	"devDependencies": {
-		"dprint": "^0.47.2",
-		"eslint": "^8.57.0",
-		"stylelint": "^16.7.0",
-		"typescript": "^5.5.3"
+		"dprint": "^0.47.5",
+		"eslint": "^8.57.1",
+		"stylelint": "^16.10.0",
+		"typescript": "^5.6.3"
 	},
 	"engines": {
 		"node": ">=20"
