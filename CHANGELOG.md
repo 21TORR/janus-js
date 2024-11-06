@@ -1,3 +1,9 @@
+1.0.12
+======
+
+* (improvement) Use flat config structure for ESLint Storybook config.
+
+
 1.0.11
 ======
 
