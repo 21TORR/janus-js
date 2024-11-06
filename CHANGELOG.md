@@ -1,3 +1,10 @@
+2.0.0
+======
+
+* (bc) Update `@next/eslint-plugin-next` to v15.
+* (improvement) Update eslint in `_init/next-js/package.json` to v9.
+
+
 1.0.13
 ======
 
