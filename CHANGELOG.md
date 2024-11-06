@@ -1,3 +1,9 @@
+1.0.13
+======
+
+* (improvement) Bump dependencies.
+
+
 1.0.12
 ======
 
