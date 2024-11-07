@@ -25,7 +25,7 @@
 	"dependencies": {
 		"@eslint/eslintrc": "^3.1.0",
 		"@eslint/js": "^9.14.0",
-		"@next/eslint-plugin-next": "^14.2.5",
+		"@next/eslint-plugin-next": "^15.0.2",
 		"deep-equal-json": "^1.0.0",
 		"deep-extend": "^0.6.0",
 		"eslint-plugin-jsdoc": "^50.4.3",
