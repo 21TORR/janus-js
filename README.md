@@ -24,6 +24,7 @@ If any of the files changed, you should run the lint fixers + `pnpm i` afterward
 You can currently initialize the following app types:
 
 - `next-js`
+- `library`
 
 
 ## Contributing
